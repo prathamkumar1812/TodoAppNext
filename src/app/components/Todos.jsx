@@ -21,7 +21,7 @@ function Todos() {
   const filterItem = useSelector((state) => state.filtertodo);
   const CompletedItem = useSelector((state) => state.completed)
 
-  let searchtodos = todos.filter((todo) => todo.title.includes(SearchItem));
+  let searchtodos = todos.filter((todo) => todo.title.toLowerCase().includes(SearchItem));
   if (isfilter) {
     if (filterItem != 'All') {
       searchtodos = searchtodos.filter((todo) => todo.Priority === filterItem);
