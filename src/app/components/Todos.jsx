@@ -68,8 +68,8 @@ function Todos() {
         {/* show todos */}
         <ul className=' mt-4 list-none'>
           {searchtodos.map((todo) => (
-            <div className='flex justify-between items-center h-1/8 border-b-2 border-gray-500 mt-4 bg-[#427D9D] rounded-md p-3 '>
-              <li key={todo.id} className=' w-full cursor-pointer' onClick={(e) => changes(e, todo)}
+            <div key={todo.id} className='flex justify-between items-center h-1/8 border-b-2 border-gray-500 mt-4 bg-[#427D9D] rounded-md p-3 '>
+              <li  className=' w-full cursor-pointer' onClick={(e) => changes(e, todo)}
 
               >
                 <span className='text-xl'>{todo.title}</span>
