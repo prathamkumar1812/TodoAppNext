@@ -1,16 +1,10 @@
 'use client';
 import { createSlice ,nanoid} from "@reduxjs/toolkit";
 
-const fetch=()=>{
-    const todos=JSON.parse(window.localStorage.getItem("todos"));
-    if(todos && todos.length>0){
-       return todos
-    }
-    return []
-}
+
 const initialState = {
     
-    todos:fetch(),
+    todos:[],
     searchItem: "",
     filtertodo: "All",
     completed:"All",
